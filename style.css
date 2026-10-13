@@ -1105,3 +1105,33 @@ section {
     text-align: center;
   }
 }
+
+/* Footer version line: spacing, contrast, readability */
+.footer-version {
+  display: inline-block;
+  margin: 12px auto 0;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  color: #f9fafb;            /* near-white text */
+  background-color: #111827; /* dark background, high contrast */
+  border-radius: 8px;
+  text-align: center;
+}
+
+.footer-version #deployDate {
+  color: #fbbf24;            /* highlight the date */
+}
+
+/* Mobile: wrap cleanly and stay readable */
+@media (max-width: 600px) {
+  .footer-version {
+    display: block;
+    font-size: 0.85rem;
+    padding: 10px 12px;
+    margin: 12px 8px 0;
+    word-break: break-word;
+  }
+}
