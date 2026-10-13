@@ -1135,3 +1135,8 @@ section {
     word-break: break-word;
   }
 }
+
+.hero-content h1 a {
+  color: #fbbf24;
+  text-decoration: underline;
+}
