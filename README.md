@@ -40,3 +40,19 @@ Add this line (example):
 ```
 
 ✅ This proof must be visible in your browser screenshot submission.
+
+## Footer: Version and Deploy Date
+
+The footer shows: `Pravin Mishra Portfolio v1.0 — Deployed on <DD Mon YYYY> — By Mazin Jifthikker`
+
+**How the date works:** The date is generated in the browser using JavaScript from `document.lastModified`, which reflects when `index.html` was last updated on the Nginx server. Every deployment replaces the file, so the displayed date updates automatically without any manual edits.
+
+```html
+<span id="deployDate"></span>
+<script>
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const d = new Date(document.lastModified);
+  document.getElementById("deployDate").textContent =
+    `${String(d.getDate()).padStart(2, "0")} ${months[d.getMonth()]} ${d.getFullYear()}`;
+</script>
+```

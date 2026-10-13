@@ -526,13 +526,20 @@
       <div class="footer-bottom">
         <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
         <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
-        <p>Pravin Mishra Portfolio v1.0 — Deployed on 14 Oct 2026 — By Mazin Jifthikker</p>
+        <p>Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate"></span> — By Mazin Jifthikker</p>
       </div>
 
     </div>
   </footer>
 
-
+<script>
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const d = new Date(document.lastModified);
+  const day = String(d.getDate()).padStart(2, "0");
+  document.getElementById("deployDate").textContent =
+    `${day} ${months[d.getMonth()]} ${d.getFullYear()}`;
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 
